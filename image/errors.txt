@@ -1,0 +1,7 @@
+[2021-3-14 13:43:00] layer "book&cafe_logo.png": Duplicate path: book&cafe_logo.png
+[2021-3-14 13:43:00] layer "BOOK&CAFE_logo.png": Duplicate path: BOOK&CAFE_logo.png
+[2021-3-14 13:43:00] layer "book&cafe_logo.png": Duplicate path: book&cafe_logo.png
+[2021-3-14 13:43:00] layer "BOOK&CAFE_logo.png": Duplicate path: BOOK&CAFE_logo.png
+[2021-3-14 13:43:00] layer "BOOK&CAFE_logo.png": Duplicate path: BOOK&CAFE_logo.png
+[2021-3-14 13:43:00] layer "sns_instagram.png": Duplicate path: sns_instagram.png
+[2021-3-14 13:43:00] layer "twitter.png": Duplicate path: twitter.png

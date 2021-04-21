@@ -1,0 +1,1511 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================*/
+/* ========================================
+共通ここから
+========================================= */
+body{
+	background-color: #f3f3f3 !important;
+}
+@media screen and (max-width: 576.98px) {
+body{
+	overflow: hidden;
+}
+}
+.clear{
+	clear: both;
+}
+/* ボタン共通 */
+.button a{
+	width: 218px;
+	height:51px;
+	line-height: 51px;
+	font-size: 30px;
+	font-family: "BIZ UD明朝";
+	letter-spacing:0.2em;
+	color: #5e5d59;
+	display: inline-block;
+	box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+	
+}
+#hotdrink a ,#icedrink a,#cake a,#news_button a{
+	text-decoration: none;
+	background-position: top 50% left 92%;
+
+}
+.button a:hover{
+	transform: translateY(5px);
+	cursor: pointer;
+	box-shadow: none;
+	color: #5e5d59;
+}
+/* ========================================
+ヘッダーここから
+========================================= */
+
+nav{
+	width: 100%;
+	height: 75px;
+	background-color: rgba(255,255,255,0.6);
+	position: absolute;
+	z-index: 1000;
+	position: fixed;
+}
+@media screen and (min-width: 992px) {
+header{
+	position: relative;
+		/* height: 861px; */
+	height:100% ;
+}
+nav h1 img{
+	width: 7%;
+	margin-left: 10px;
+	display: block;
+	float: left;
+}
+nav ul{
+	width: 395px;
+	height: 23px;
+	margin-right: 28px;
+	float: right;	
+	line-height: 57px;
+}
+nav li{
+	padding-left: 26px;
+	float: right;
+}
+nav li a{
+	color: #fff;
+	font-family: "小塚ゴシック Pr6N";
+	font-size: 20px;
+	text-shadow: rgba(0,0,0,0.2) 2px 2px 0;
+}
+nav li a:hover{
+	color: #45362e;
+}
+/* .carousel-inner{
+	height: 715px;
+} */
+#cl_info{
+	left: 33%;
+}
+}
+@media screen and (max-width: 991.98px) {
+header{
+	position: relative;
+	/* height: 542px; */
+}
+nav ul{
+	display: none;
+}
+#cl_info{
+	left: 15%;
+}
+}
+@media screen and (min-width: 768px) {
+nav h1 img{
+	width: 61px;
+	margin-left: 10px;
+	margin-top: 8px;
+	display: block;
+	float: left;
+}
+nav h2 img{
+	width: 427px;
+	height: 71px;
+	float: left;
+}
+}
+@media screen and (max-width: 767.98px) {
+header{
+	position: relative;
+	/* height: 471px; */
+}
+nav h1 img{
+	width: 53px;
+	margin-top: 10px;
+	float: left;
+}
+nav h2 img{
+	width: 323px;
+	float: left;
+}
+}
+@media screen and (min-width: 577px) {
+#cl_info{
+	bottom: 130px;
+}
+
+#cl_info h3{
+	font-size: 20px;
+}
+#cl_info h4{
+	font-size: 18px;
+}
+#twitter_logo img{
+	width: 22px;
+}
+#wifi_logo img{
+	width: 25px;
+}
+}
+@media screen and (max-width: 576.98px) {
+header{
+	position: relative;
+	/* height: 363px; */
+	height: 176px;
+}
+nav h1 img{
+	width: 44px;
+	float: left;
+	margin-top: 14px;
+}
+nav h2 img{
+	width: 211px;
+	float: left;
+	margin-top: 8px;
+}
+#cl_info{
+	bottom: 20%;
+}
+#cl_info h3{
+	font-size: 20px;
+
+}
+#cl_info h4{
+	font-size: 18px;
+}
+#twitter_logo img{
+	width: 15px;
+}
+#wifi_logo img{
+	width: 20px;
+}
+}
+/* カルーセルここから */
+#cl{
+	position: absolute;
+	top: 0;
+	z-index: 800;
+	width: 100%;
+}
+#cl_info{
+	position: absolute;
+	width: 68%;
+	height: 66px;
+}
+#wifi_logo img{
+	float: left;
+	margin-left:10px;
+}
+#twitter_logo img{
+	float: left;
+	margin-left:10px;
+}
+#cl_info h3{
+	float: left;
+	color: #fff;
+	margin-right: 20px;
+}
+#cl_info h4{
+	float: left;
+	color: #fff;
+}
+/* ========================================
+    ハンバーガーメニューここから
+========================================= */
+/* コンテナの定義 */
+#container {
+	max-width: 100%;
+	padding: 0;
+}
+/* /コンテナの定義 */
+@media screen and (min-width: 992px) {
+	#hambuger{
+		display: none;
+	}
+	}
+	
+/* バーガーメニューのボタン*/
+@media screen and (max-width: 991.98px) {
+.menu-trigger {
+	display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height:2px;
+	background-color: #f6f8f5;
+	border-radius: 4px;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+.menu-trigger.active span {
+	background-color: #fff;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+	transform: translateY(9px) rotate(-315deg);
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+	transform: translateY(-16px) rotate(315deg);
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top: 12px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+#hambuger{
+	position: absolute;
+	top:17px;
+	z-index: 2000;
+	max-width: 100%;
+	padding: 0;
+	position: fixed;
+}
+/* /バーガーメニューのボタンここまで*/
+
+/* アコーディオンメニュー */
+.accordion-menu ul {
+	visibility: hidden;
+	transition: visibility 0s linear 0.3s, padding 0s linear 0.3s;
+	margin-top: 0;
+	/* margin-left: -30px; */
+	padding-left: 3%;
+	height: 71px;
+	margin: 0 auto;
+}
+
+.accordion-menu ul li {
+	width: 25%;
+	margin: 0 auto; 
+	transition: height 0.3s ease-in-out, border 0s linear 0.3s;
+	list-style: none;
+	height: 0;
+	text-align: center;
+	float: left;
+}
+
+.accordion-menu ul li a {
+	display: block;
+	line-height: 40px;
+	width: 76%;
+	height: 100%;
+	color: #000;
+	text-decoration: none;
+	font-size: 18px;
+	letter-spacing:0.2em;
+	border-bottom: 1px dotted #000;
+}
+.accordion-menu ul li a:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.menu-trigger.active+.accordion-menu ul {
+	margin-top: 58px;
+	padding-top: 10px;
+	visibility: visible;
+	transition: visibility 0s linear 0.0s;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.menu-trigger.active+.accordion-menu ul li {
+	margin-top: 0;
+	height: 40px;
+	display: list-item;
+	transition: height 0.3s ease-in-out;
+
+/* /アコーディオンメニュー */
+}
+}
+@media screen and (max-width: 576.98px) {
+.accordion-menu ul li {
+	float: none;
+}
+.accordion-menu ul{
+	height: 100%;
+}
+}
+/* ========================================
+メインここから
+========================================= */
+main{
+	padding-top: 56%;
+    height: 100%;
+}
+@media screen and (max-width: 991.98px) {
+main{
+	padding-top: 56%;
+}
+}
+@media screen and (max-width: 576.98px) {
+main{
+	padding-top: 17%;
+}
+}
+/* ========================================
+コンセプトここから
+========================================= */
+#concept h5{
+	width: 271px;
+	height:30px;
+	background-image: url(image/consept_line.png);
+	background-repeat: no-repeat;
+	background-size:17% ;
+	background-position: top 52% left 1%;
+	margin-left: 196px;
+	padding-left: 65px;
+	position: absolute;
+	top :8%;
+	left: 2%;
+	font-family: "Courier New";
+	font-size: 30px;
+}
+#contents h6  {
+	font-family: "HGSｺﾞｼｯｸE";
+	color: #555353;
+}
+#contents p{
+	font-family: "BIZ UDP明朝";
+	text-align: center;
+	letter-spacing:0.1em;
+	line-height: 2;
+}
+@media screen and (min-width: 768px) {
+#concept{
+	height: 777px;
+	background-image: url(image/concept_textbox.png),url(image/concept_bg.png);
+	background-repeat: no-repeat;
+	background-size:579px 385px,100%;
+	background-position:  top 50% left 50%,top 0 left 0;
+	position: relative;
+}
+#contents {
+	width: 472px;
+	height: 309px;
+	margin: 0 auto;
+}
+#contents h6  {
+	font-size: 23px;
+	margin-bottom: 45px;
+	letter-spacing:0.1em;
+	position: absolute;
+	top: 30%;
+}
+#contents p{
+	font-size: 16px;
+	position: absolute;
+    top: 40%;
+}
+}
+
+@media screen and (max-width: 767.98px) {
+#concept{
+	height: 675px;
+	background-image: url(image/concept_textbox_bg.png);
+	background-repeat: no-repeat;
+	background-size:92%;
+	background-position:  top 50% left 50%;
+	position: relative;
+}
+#contents {
+	background-color: #fff;
+    width: 73%;
+    height: 43%;
+    margin: 0 auto;
+    position: absolute;
+    left: 14%;
+    top: 27%;
+}
+#contents h6{
+	padding-top: 3%;
+    padding-left: 6%;
+	padding-bottom: 5%;
+	font-size: 17px;
+}
+#contents p{
+	font-size: 15px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#contents{
+	width: 81%;
+    height: 47%;
+    position: absolute;
+    top: 28%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#concept{
+	height: 437px;
+	background-size: 114%;
+    background-position: top 54% left 47%;
+}
+#concept h5{
+	margin-left: 0;
+	font-size: 23px;
+	background-size: 15%;
+}
+#contents p{
+	font-size: 10px;
+}
+}
+/* ========================================
+メニューここから
+========================================= */
+#menu {
+	/* width: 100%; */
+	height:672px;
+	background-image: url(image/manu_bg.png);
+	background-size: 100% 100%;
+	position: relative;
+	background-repeat: no-repeat;
+}
+#menu h5{
+	width: 372px;
+	height:30px;
+	background-image: url(image/consept_line.png);
+	background-repeat: no-repeat;
+	background-size:12% ;
+	background-position: top 52% left 1%;
+	padding-left: 65px;
+	font-family: "Courier New";
+	font-size: 30px;
+	position: absolute;
+	top :8%;
+	left: 2%;
+	margin-left: 196px;
+}
+/* メニューボタン共通 */
+#hotdrink a,#icedrink a,#cake a{
+	background-repeat: no-repeat;
+	background-size:15%,100% ;
+	background-position:  top 43% left 88%,top 0% left 50%;
+	padding-left:70px;
+}
+
+#hotdrink{
+	width: 270px;
+	height:256px;
+	background-image: url(image/hot.png);
+	background-repeat: no-repeat;
+	background-position: top 50% left 50%;
+}
+#hotdrink a{
+	background-image: url(image/arrow.png),url(image/menu_button.png);
+}
+
+#icedrink{
+	width: 270px;
+	height:256px;
+	background-image: url(image/ice.png);
+	background-repeat: no-repeat;
+	background-position: top 50% left 50%;
+}
+#icedrink a{
+	background-image: url(image/arrow.png),url(image/menu_button.png);
+}
+#cake{
+	width: 270px;
+	height:256px;
+	background-image: url(image/ph_cake.png);
+	background-repeat: no-repeat;
+	background-position: top 50% left 50%;
+}
+#cake a{
+	background-image: url(image/arrow.png),url(image/menu_button.png);
+}
+@media screen and (min-width: 992px) {
+#menu_wrap{
+	width: 878px;
+    height: 264px;
+    margin: 0 auto;
+    position: relative;
+    top: 139px;
+}
+
+#hotdrink{
+	position: absolute;
+	top :0;
+	left: 0;
+}
+#icedrink{
+	position: absolute;
+	top :0;
+	left: 35%;
+}
+#cake{
+	position: absolute;
+	top :0;
+	right: 0;
+}
+}
+@media screen and (max-width: 991.98px) {
+#menu{
+	height: 783px;
+	background-size: 100% 100%;
+}
+#menu_wrap{
+	width: 755px;
+    height: 264px;
+    margin: 0 auto;
+    position: relative;
+    top: 139px;
+}
+
+#hotdrink{
+	position: absolute;
+	top :0;
+	left: 0;
+}
+#icedrink{
+	position: absolute;
+	top :0;
+	left: 241px;
+}
+#cake{
+	position: absolute;
+	top :0;
+	right: 0;
+}
+}
+@media screen and (min-width: 768px) {
+#hotdrink a,#icedrink a,#cake a{
+	position: absolute;
+	top :112%;
+	left: 11%;
+}
+#hotdrink,#icedrink,#cake{
+	background-size:65% ;
+}
+}
+@media screen and (max-width: 767.98px) {
+#menu {
+	height: 815px;
+	background-size: 100% 100%;
+}
+#hotdrink{
+	position: absolute;
+	top :0;
+	left: 0;
+}
+#icedrink{
+	position: absolute;
+    top: 180px;
+    left: 0px;
+}
+#cake{
+	position: absolute;
+	top :360px;
+	left: 0;
+}
+#hotdrink a,#icedrink a,#cake a{
+	position: absolute;
+	top :44%;
+	left: 98%;
+}
+#hotdrink,#icedrink,#cake{
+	background-size:55% ;
+}
+}
+@media screen and (min-width: 577px) {
+
+	/* #menu_wrap{
+	width: 501px;
+    height: 508px;
+    margin: 0 auto;
+    position: relative;
+    top: 187px;
+} */
+}
+@media screen and (max-width: 576.98px) {
+#menu{
+	width: 100%;
+	/* height: 702px; */
+	height: 955px;
+	background-size: 100% 100%;
+
+}
+#menu_wrap{
+	margin: 0;
+	top: 98px;
+}
+#menu h5{
+	position: absolute;
+	top :4%;
+	background-size: 10%;
+    background-position: top 43% left 3%;
+	margin-left: 0;
+	font-size: 23px;
+	background-size: 10%;
+}
+#menu_wrap{
+	width: 100%;
+}
+#hotdrink, #icedrink, #cake{
+	background-size: 33%;
+	width: 100%;
+}
+#icedrink{
+	top:235px;
+}
+#cake{
+	top:476px;
+
+}
+#hotdrink a, #icedrink a, #cake a{
+	left: 0;
+    right: 0;
+	top: 87%;
+    margin: auto;
+}
+}
+
+/* ========================================
+インフォメーションここから
+========================================= */
+#info{
+	width: 100%;
+	height: 530px;
+	position: relative;
+}
+#info h5{
+	width: 372px;
+	height:30px;
+	background-image: url(image/consept_line.png);
+	background-repeat: no-repeat;
+	padding-left: 65px;
+	position: absolute;
+	top :-13%;
+	left: 2%;
+	font-family: "Courier New";
+	font-size: 30px;
+}
+#info_textbox{
+	background-image: url(image/info_textbox.png);
+	background-repeat: no-repeat;
+	margin: 127px auto; 
+}
+
+#info_textbox ul{
+	width: 520px;
+	height: 216px;
+	margin: 0 auto;
+}
+#info_textbox li{
+	float: left;
+	padding-bottom: 20px;
+	letter-spacing:0.2em;
+	font-family: "小塚ゴシック Pr6N";
+
+}
+#info_textbox span{
+	width: 300px;
+	text-align: center;
+	margin-left: 73px;
+}
+@media screen and (min-width: 768px) {
+#info_textbox{
+	width: 633px;
+	height: 403px;
+	background-size:623px 404px;
+}
+}
+@media screen and (max-width: 767.98px) {
+#info_textbox{
+	width: 93%;
+    height: 80%;
+	background-size:100%;
+}
+}
+@media screen and (min-width: 577px) {
+#info h5{
+	margin-left: 196px;	
+	background-size:12% ;
+	background-position: top 52% left 1%;
+}
+
+#info_textbox ul{
+	padding-top: 78px;
+}
+#info_textbox li{
+	width: 253px;
+	font-size: 13px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#info_textbox{
+	background-size: 314%;
+	height: 96%;
+	width: 80%;
+}
+#info_textbox ul{
+	width: 298px;
+}
+#info_textbox li{
+	margin-left: 55px;
+}
+#info h5{
+	margin-left: 0;	
+	font-size: 23px;
+	background-size:10% ;
+	background-position: top 42% left 1%;
+}
+#info_textbox ul{
+	padding-top: 60px;
+}
+#info_textbox li{
+	width: 214px;
+	font-size: 11px;
+	margin-left: 23px;
+}
+}
+/* ========================================
+アクセスここから
+========================================= */
+#access {
+	width: 100%;
+	background-image: url(image/access_image.png);
+	background-repeat: no-repeat;
+	background-position: top 78% left 50%;
+	position: relative;
+	margin-bottom: 100px;
+}
+#access h5{
+	width: 372px;
+	height:30px;
+	background-image: url(image/access_whiteline.png);
+	background-repeat: no-repeat;
+	background-size:12% ;
+	background-position: top 52% left 1%;
+	margin-left: 196px;
+	padding-left: 65px;
+	position: absolute;
+	left: 2%;
+	font-family: "Courier New";
+	font-size: 30px;
+	color: #fff;
+}
+#address,#Transportation{
+	color: #fff;
+	display: inline-block;
+}
+iframe:hover{
+	opacity: 0.5;
+}
+
+.overpanel img{
+	position: absolute;
+    top: 36%;
+    left: 23%;
+}
+@media screen and (min-width: 992px) {
+#address{
+	position: absolute;
+	top:166px;
+	left: 16%;
+}
+#Transportation {
+	position: absolute;
+	top:263px;
+	left:16%;
+}
+iframe{
+	width: 378px;
+    height: 344px;
+}
+}
+@media screen and (max-width: 991.98px) {
+#address{
+	position: absolute;
+	top:166px;
+	left: 14%;
+}
+#Transportation {
+	position: absolute;
+	top:263px;
+	left:11%;
+}
+iframe{
+	width: 338px;
+    height: 304px;
+}
+}
+
+@media screen and (min-width: 768px) {
+#access {
+	height: 466px;
+	background-size:100%;
+}
+#access h5{
+	top :5%;
+}
+.overpanel{
+	width: 339px;
+    height: 306px;
+    position: absolute;
+    top: 19%;
+    left: 52%;
+}
+}
+@media screen and (max-width: 767.98px) {
+#access {
+	height: 554px;
+	background-size:150%;
+}
+#access h5{
+	top :11%;
+}
+#address{
+	position: absolute;
+	top:342px;
+	left: 10%;
+}
+#Transportation {
+	position: absolute;
+	top:410px;
+	left:10%;
+}
+iframe{
+	width:293px;
+	height: 260px;
+}
+.overpanel{
+	width: 294px;
+    height: 306px;
+    position: absolute;
+    top: 30%;
+    left: 47%;
+}
+}
+@media screen and (max-width: 576.98px) {
+#access {
+	height: 495px;
+    background-size: 254%;
+}
+#access h5{
+	margin-left: 0;
+	font-size: 23px;
+	background-size:10% ;
+	background-position: top 42% left 1%;
+}
+.overpanel{
+	width: 273px;
+	top: 22%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+iframe{
+	width: 263px;
+    height: 230px;
+}	
+}
+/* .overpanel{
+	width: 339px;
+    height: 306px;
+    position: absolute;
+    top: 22%;
+    left: 40%;
+} */
+/* #address{
+	position: absolute;
+	top:355px;
+	left: 3%;
+} */
+/* #Transportation {
+	position: absolute;
+	top:419px;
+	left:3%;
+} */
+/* ========================================
+ニュースここから
+========================================= */
+#news{
+	width: 100%;
+	height: 570px;
+	position: relative;
+}
+#news h5{
+	width: 372px;
+	height:30px;
+	background-image: url(image/consept_line.png);
+	background-repeat: no-repeat;
+	background-size:12% ;
+	background-position: top 52% left 1%;
+	margin-left: 196px;
+	padding-left: 65px;
+	position: absolute;
+	top :-11%;
+	left: 2%;
+	font-family: "Courier New";
+	font-size: 30px;
+	color: #000;
+}
+#news_main{
+	max-width: 767px;
+	height: 584px;
+	margin: 0 auto;
+	background-image: url(image/leatherbag_shop.png);
+	background-repeat: no-repeat;
+	background-position: top 16% left 10%; 
+}
+#news_text{
+	width: 216px;
+	height: 198	px;
+}
+#news_text h6{
+	border: 1px solid #ff0000;
+	background-color: #ff0000;
+	padding: 2px;
+	width: 43px;
+	font-family: "BIZ UD明朝";
+	letter-spacing:0.1em;
+	font-size: 17px;
+	text-align: center;
+	display: inline-block;
+	z-index: 500;
+}
+#news_text p{
+	margin-bottom: 0px;
+}
+#news_text span{
+	font-family: "BIZ UD明朝";
+	color: #ada8a8;
+	font-size: 14px;
+}
+#news_text a{
+	font-family: "BIZ UD明朝";
+	text-decoration: none;
+	color: #000;
+}
+#news_button {
+	margin-top: 32px;
+}
+#news_button a{
+	width: 205px;
+	height: 52px;
+	background-color: #000;
+	color: #fff;
+	font-size: 23px;
+	background-image: url(image/arrow_white.png);
+	background-repeat: no-repeat;
+	background-size:14% ;
+	background-position: top 50% left 92%;
+	padding-left: 20px;
+	line-height: 52px;
+}
+@media screen and (min-width: 992px) {
+#news_main{
+	background-size:380px,380px ;
+}
+}
+@media screen and (max-width: 991.98px) {
+#news_main{
+	background-size:353px,353px ;
+}
+}
+@media screen and (min-width: 768px) {
+#news_text{
+	/* position: absolute;
+	top:45%;
+	left: 57%; */
+	margin: -256px auto;
+}
+#news_contents{
+	width: 378px;
+	height: 315px;
+	position: absolute;
+	top: 34%;
+	left:48%;
+}
+#news_contents img{
+	width: 378px;
+	height: 315px;
+}
+#news_main{
+	width: 75%;
+}
+}
+@media screen and (max-width: 767.98px) {
+#news_text{
+	/* position: absolute;
+	top:50%;
+	left: 47%; */
+	margin: -256px auto;
+}
+#news_main{
+	width: 90%;
+}
+#news_contents{
+	width: 322px;
+	height: 315px;
+	position: absolute;
+	top: 40%;
+	left:41%;
+}
+#news_main img{
+	width: 324px;
+	height: 315px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#news h5{
+	margin-left: 0;
+	font-size: 23px;
+	background-size:10% ;
+	background-position: top 42% left 1%;
+}
+#news_text{
+	/* left: 36%;
+    top: 51%; */
+	margin: -240px auto;
+}
+#news_main{
+	background-position:top 6% left 10%;
+}
+#news_contents{
+	width: 304px;
+	height: 286px;
+	position: absolute;
+	top: 27%;
+    left: 17%;
+}
+#news_main img{
+	width: 311px;
+    height: 283px;
+}
+}
+/* ========================================
+アプリ紹介ここから
+========================================= */
+#app_Intro{
+	width: 100%;
+	height: 565px;
+	background-image:  url(image/app.png),url(image/app_background.png);
+	background-repeat: no-repeat;
+	background-position: bottom left 0,0;
+	position: relative;
+}
+#app_Intro:hover{
+	opacity: 0.9;
+}
+#app_text p{
+	font-family: "BIZ UD明朝";
+}
+#app_text span{
+	font-size: 30px;
+}
+/* #arrow a{
+	width: 80px;
+	height: 472px;
+	background-image:url(image/app_arow.png);
+	background-repeat: no-repeat;
+	background-position: top 50% right 50%;
+	position: absolute;
+	right: 0;
+} */
+#app_store:hover,#google_play:hover{
+    cursor: pointer;
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+  @-webkit-keyframes flash {
+	0% {
+	  opacity: .4;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  @keyframes flash {
+	0% {
+	  opacity: .4;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+@media screen and (min-width: 992px) {
+#app_Intro{
+	background-size:25%,100% ;
+}
+#google_play{
+	position: absolute;
+	bottom:10%;
+	left: 57%;
+}
+}
+
+@media screen and (max-width: 991.98px) {
+#google_play{
+	position: absolute;
+	bottom:10%;
+	left: 63%;
+}
+#app_Intro{
+	background-size:25%,125% ;
+	height: 487px;
+}
+}
+@media screen and (min-width: 768px) {
+#app_store{
+	position: absolute;
+	bottom:10%;
+	left: 37%;
+}
+}
+@media screen and (max-width: 767.98px) {
+#app_Intro{
+	background-size:25%,166% ;
+}
+#app_store{
+	position: absolute;
+	bottom:10%;
+	left: 28%;
+}
+#google_play{
+	position: absolute;
+	bottom:10%;
+	left: 62%;
+}
+}
+@media screen and (min-width: 577px) {
+#app_text{
+	position: absolute;
+	top:17%;
+	left: 28%;
+}
+#app_text p{
+	font-size: 20px;
+}
+#arrow a{
+	background-size:40% ;
+}
+#app_store img{
+	width: 176px;
+}
+#google_play img{
+	width: 190px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#app_text{
+	position: absolute;
+	top:10%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 357px;
+}
+#app_text p{
+	font-size: 17px;
+}
+#arrow a{
+	background-size:28% ;
+}
+#app_Intro{
+	background-size: 26%,272%;
+}
+#app_store{
+	position: absolute;
+    bottom: 26%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 152px;
+}
+#app_store img{
+	width: 152px;
+}
+#google_play{
+	position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 158px;
+}
+#google_play img{
+	width: 160px;
+}
+}
+/* ========================================
+バナーここから
+========================================= */
+#banner{
+	width: 100%;
+	height: 314px;
+}
+#wrap img:hover{
+	transform: translateY(5px);
+	cursor: pointer;
+	opacity: 0.7;
+}
+#wrap{
+	max-width: 818px;
+	height: 80%;
+	margin: 60px auto;
+}
+#wrap img{
+	max-width: 320px;
+	width: 50%;
+	float: left;
+}
+@media screen and (min-width: 992px) {
+#olive_ba{
+	margin-right: 80px;
+}
+}
+@media screen and (min-width: 768px) {
+#wrap{
+	width:720px;
+}
+#banner{
+	margin-bottom: 80px;
+}
+}
+@media screen and (max-width: 767.98px) {
+#wrap{
+	width:80%;
+}
+}
+@media screen and (max-width: 576.98px) {
+#wrap{
+	width:95%;
+}
+}
+/* ========================================
+フッターここから
+========================================= */
+footer{
+	width: 100%;
+	height: 114px;
+	position: relative;
+}
+#footer_inner{
+	width: 100%;
+	background-color: #45362e;	
+	position: relative;
+}
+#footer_inner p{
+	color: #fff;
+	font-size: 13px;
+	margin-bottom: 0;
+}
+#contact_button a{
+color: #fff;
+font-size: 18px;
+}
+/* snsここから */
+#footer_sns{
+	width: 169px;
+	height: 75px;
+}
+#footer_sns a{
+	width: 40px;
+	height: 41px;
+	float: left;
+	margin-left: 30px;
+}
+#insta a{
+	background-image:url(image/sns_instagram.png);
+	background-repeat: no-repeat;
+	background-size:100% ;
+}
+#insta a:hover{
+	background-image:url(image/sns_inst_hover.png);
+	background-repeat: no-repeat;
+	background-size:100% ;
+	color:#cf2e92 ;
+}
+#insta span{
+	position: absolute;
+    top: 63px;
+    left: 14px;
+	color: #fff;
+}
+#insta span:hover{
+	color:#cf2e92 ;
+}
+#twitter a{
+	background-image:url(image/twitter.png);
+	background-repeat: no-repeat;
+	background-size:100% ;
+}
+#twitter a:hover{
+	background-image:url(image/twitter_hover.png);
+	background-repeat: no-repeat;
+	background-size:100% ;
+	color:#1da1f2 ;
+}
+#twitter span{
+	position: absolute;
+    top: 63px;
+    left: 97px;
+	color: #fff;
+}
+#twitter span:hover{
+	color:#1da1f2 ;
+}
+#footer_sns h6{
+	color: #fff;
+	padding-left:37px;
+}
+/* snsここまで */
+#footer_logo {
+	height: 55px;
+	position: absolute;
+	padding-top: 16px;
+}
+#footer_logo:hover {
+	opacity: 0.5;
+}
+#footer_logo h1 img{
+	width: 17%;
+	margin-left: 10px;
+	display: block;
+	float: left;
+}
+#footer_logo h2 img{
+	width: 79%;
+	float: left;
+}
+#ptop_bt img{
+	height: 66px;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 20px;
+    top: -80px;
+}
+#ptop_bt img:hover{
+	transform: translateY(-5px);
+	cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+#footer_sns{
+	position: absolute;
+	top: 21%;
+	left: 39%;
+}
+#footer_inner p{
+	padding-left: 24px;
+	padding-top: 30px;
+}
+#contact_button{
+	padding-left: 24px;
+}
+#footer_logo {
+	right: 5%;
+	width: 290px;
+}
+#footer_inner{
+	height: 113px;
+}
+}
+@media screen and (max-width: 767.98px) {
+#footer_sns{
+	position: absolute;
+	top: 45%;
+	left: 63%;
+}
+#footer_inner p{
+	padding-left: 86px;
+	padding-top: 85px;
+}
+#contact_button{
+	padding-left: 89px;
+}
+#footer_logo {
+	left: 11%;
+	width: 250px;
+}
+#footer_inner{
+	height: 200px;
+}
+}
+@media screen and (max-width: 576.98px) {
+footer{
+	height: 195px;
+}
+#footer_inner p{
+	padding-left: 10px;
+	padding-top: 67px;
+}
+#contact_button{
+	padding-left: 10px;
+}
+#footer_sns{
+	left: 59%;
+}
+}
